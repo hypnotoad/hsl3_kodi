@@ -1,0 +1,146 @@
+{
+  "module": {
+    "category": "Services",
+    "context": "kodi",
+    "id": "14587",
+    "name": "Kodi",
+    "version": "0.9.0",
+    "inputs": [
+      {
+        "label": "Hostname",
+        "identifier": "server_name",
+        "init_value": "",
+        "type": "string"
+      },
+      {
+        "label": "Port",
+        "identifier": "port",
+        "init_value": "9090",
+        "type": "number"
+      },
+      {
+        "label": "Open File",
+        "identifier": "open_file",
+        "init_value": "",
+        "type": "string"
+      },
+      {
+        "label": "Next [1] / Prev [0]",
+        "identifier": "nextprev",
+        "init_value": "0",
+        "type": "number"
+      },
+      {
+        "label": "Start [1] / Stop [0]",
+        "identifier": "startstop",
+        "init_value": "0",
+        "type": "number"
+      },
+      {
+        "label": "Pause [1] / Play [0]",
+        "identifier": "pauseplay",
+        "init_value": "0",
+        "type": "number"
+      },
+      {
+        "label": "Volume 0-100",
+        "identifier": "set_volume",
+        "init_value": "0",
+        "type": "number"
+      },
+      {
+        "label": "Mute [1]",
+        "identifier": "set_mute",
+        "init_value": "0",
+        "type": "number"
+      },
+      {
+        "label": "Repeat All",
+        "identifier": "repeatall",
+        "init_value": "0",
+        "type": "number"
+      },
+      {
+        "label": "Shuffle",
+        "identifier": "shuffle",
+        "init_value": "0",
+        "type": "number"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Connected",
+        "identifier": "connected",
+        "init_value": "0",
+        "type": "number"
+      },
+      {
+        "label": "File",
+        "identifier": "current_file",
+        "init_value": "",
+        "type": "string"
+      },
+      {
+        "label": "Playing",
+        "identifier": "playing",
+        "init_value": "0",
+        "type": "number"
+      },
+      {
+        "label": "Paused",
+        "identifier": "paused",
+        "init_value": "0",
+        "type": "number"
+      },
+      {
+        "label": "Title",
+        "identifier": "title",
+        "init_value": "",
+        "type": "string"
+      },
+      {
+        "label": "Artist",
+        "identifier": "artist",
+        "init_value": "",
+        "type": "string"
+      },
+      {
+        "label": "Album",
+        "identifier": "album",
+        "init_value": "",
+        "type": "string"
+      },
+      {
+        "label": "Volume",
+        "identifier": "volume",
+        "init_value": "0",
+        "type": "number"
+      },
+      {
+        "label": "Muted",
+        "identifier": "muted",
+        "init_value": "0",
+        "type": "number"
+      },
+      {
+        "label": "Repeated",
+        "identifier": "repeated",
+        "init_value": "0",
+        "type": "number"
+      },
+      {
+        "label": "Shuffled",
+        "identifier": "shuffled",
+        "init_value": "0",
+        "type": "number"
+      }
+    ],
+    "stores": [],
+    "timers": [],
+    "scripts": [
+      {
+        "filename": "hsl3_14587_kodi.py"
+      }
+    ]
+  }
+}

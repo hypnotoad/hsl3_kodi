@@ -1,0 +1,12 @@
+Kodi hsl3 module for Gira HS >= 4.13
+
+Features:
+- Outputs are SBC.
+- Inputs are ignored if equal to Kodi's state => Outputs can be
+  connected to inputs.
+
+Limitations:
+- Initial play state might not be recovered correctly.
+- Playing and paused may have short spikes when prevnext is toggled -
+  add a delay after the output.
+- After being stopped, play does not work. This seems to be Kodi-specific.
