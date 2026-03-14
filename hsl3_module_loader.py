@@ -28,7 +28,10 @@ class ModuleLoader:
         self.is_mock = hasattr(self.fw, "is_mock")
     
     def load_zip(self, module_name, file_name, root_folder=""):
-        # load 
+        # load the module $module_name residing in the zip file
+        # $file_name at the location $root_folder. The zip file has to
+        # be placed into the folder $module_id/hsupload in the hslz
+        # file.
         if not self.is_mock:
             local_zip_path = file_name
             url = "http://127.0.0.1:65000/logic/{}/{}".format(self.fw.get_module_id(), file_name)
