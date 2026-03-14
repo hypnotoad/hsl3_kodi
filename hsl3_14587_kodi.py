@@ -22,7 +22,7 @@
 import json
 import time
 import threading
-from hsl3_module_loader import ModuleLoader
+from hsl3_14587_module_loader import ModuleLoader
 
 
 class LogicModule:

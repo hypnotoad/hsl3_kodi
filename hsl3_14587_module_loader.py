@@ -37,7 +37,7 @@ class ModuleLoader:
             url = "http://127.0.0.1:65000/logic/{}/{}".format(self.fw.get_module_id(), file_name)
             local_filename, headers = urlretrieve(url, local_zip_path)
         else:
-            local_zip_path = "../{}/hsupload/{}".format(self.fw.get_module_id(), file_name)
+            local_zip_path = "{}/hsupload/{}".format(self.fw.get_module_id(), file_name)
             
         sys.path.insert(0, local_zip_path + root_folder)
 
