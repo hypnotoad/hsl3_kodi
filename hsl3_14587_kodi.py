@@ -1,8 +1,7 @@
 import json
-import sys
 import time
 import threading
-
+from hsl3_module_loader import ModuleLoader
 
 
 class LogicModule:
@@ -51,21 +50,11 @@ class LogicModule:
         if "repeat" in property:
             self.set_state("repeated", int(property["repeat"] == "all"))
 
-    def load_zip_module(self, name, root_folder=""):
-        if not hasattr(self.fw, "is_mock"):
-            from urllib.request import urlretrieve
-            local_zip_path = name
-            url = "http://127.0.0.1:65000/logic/{}/{}".format(self.fw.get_module_id(), name)
-            local_filename, headers = urlretrieve(url, local_zip_path)
-        else:
-            local_zip_path = "{}/hsupload/{}".format(self.fw.get_module_id(), name)
-        sys.path.insert(0, local_zip_path + root_folder)
-        
     def on_init(self, inputs, store):
-        self.load_zip_module("websocket-client-1.9.0.zip",
-                             "/websocket-client-1.9.0")
-        import websocket
-        self.debug.log("Loaded websocket {}".format(websocket.__file__))
+        self.module_loader = ModuleLoader(self.fw)
+        self.module_loader.load_zip("websocket",
+                                    "websocket-client-1.9.0.zip",
+                                    "/websocket-client-1.9.0")
 
         self.stop_event = threading.Event()
         self.start_thread(inputs)

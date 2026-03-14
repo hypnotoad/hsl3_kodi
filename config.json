@@ -139,7 +139,7 @@
     "timers": [],
     "scripts": [
       {
-        "filename": "hsl3_14587_kodi.py"
+	  "folder": "."
       }
     ]
   }
