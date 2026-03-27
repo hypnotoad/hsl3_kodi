@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 
 from hsl3_14587_kodi import LogicModule
-from hsl3dummy import Hsl3Framework, Hsl3Slots
+from hsl3.dummy import Hsl3Framework, Hsl3Slots
+import logging
 import time
 import sys
 
+logging.getLogger().setLevel(logging.DEBUG)
 fw = Hsl3Framework("config.json")
 module = LogicModule(fw)
 
